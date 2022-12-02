@@ -13,7 +13,6 @@ function HomePage() {
 
   return (
     <div>
-      HomePage
       {trendingMovies && <TrendingMovies moviesData={trendingMovies} />}
     </div>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { fetchMovieById } from 'api/fetchFromApi';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -16,7 +16,10 @@ function MovieDetailsPage() {
     });
   }, [movieId]);
 
-  return <div>{movieData && <MovieDetails movieData={movieData} />}</div>;
+  return <div>
+        <Link to='/'>Go back</Link>
+
+    {movieData && <MovieDetails movieData={movieData} />}</div>;
 }
 
 export default MovieDetailsPage;

@@ -1,20 +1,26 @@
 import MoviesList from 'components/MoviesList/MoviesList';
 import React from 'react';
-import { useEffect } from 'react';
 import { useState } from 'react';
 import { fetchMovieByQuery } from '../api/fetchFromApi';
-import { Link } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 function MoviesPage() {
   const [searchResult, setSearchResult] = useState(null);
+  const [searchParams, setSerachParams] = useSearchParams();
+  const query = searchParams.get('query');
 
   const handleSubmit = event => {
     event.preventDefault();
-    const query = event.target.input.value;
-    fetchMovieByQuery(query).then(response => {
-      console.log(response);
-      setSearchResult(response);
-    });
+    const inputQuery = event.target.input.value;
+    if (inputQuery === null || inputQuery.match(/^ *$/) !== null) {
+      return alert('Type in something!');
+    }
+    setSerachParams({ query: inputQuery });
+    fetchMovieByQuery(query)
+      .then(response => {
+        setSearchResult(response);
+      })
+      .finally(event.currentTarget.reset());
   };
 
   return (

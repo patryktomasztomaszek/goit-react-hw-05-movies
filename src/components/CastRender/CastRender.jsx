@@ -4,9 +4,7 @@ import { getimageUrl } from 'utils/getImageUrl';
 import notFound from './notFound.png';
 
 function CastRender({ castData }) {
-  console.log(notFound);
   const cast = castData.cast;
-  console.log(castData);
   return (
     <>
       {cast.length > 0 ? (

@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 function ReviewsRender({ reviewsData }) {
   const reviews = reviewsData.results;
-  console.log(reviewsData);
-  console.log(reviews);
   return (
     <>
       {reviews.length > 0 ? (
