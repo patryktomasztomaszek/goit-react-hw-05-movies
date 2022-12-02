@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 function ReviewsRender({ reviewsData }) {
   const reviews = reviewsData.results;
@@ -25,6 +24,5 @@ function ReviewsRender({ reviewsData }) {
   );
 }
 
-ReviewsRender.propTypes = {};
 
 export default ReviewsRender;
