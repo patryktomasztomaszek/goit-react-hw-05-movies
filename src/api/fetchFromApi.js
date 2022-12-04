@@ -11,7 +11,7 @@ export async function fetchTrendingMovies() {
 
 export async function fetchMovieById(movieId) {
   const fetchedData = await fetch(
-    `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`
+    `${BASE_URL}movie/${movieId}?api_key=${API_KEY}`
   );
   const response = await fetchedData.json();
   return response;
@@ -19,7 +19,7 @@ export async function fetchMovieById(movieId) {
 
 export async function fetchMovieReviewsById(movieId) {
   const fetchedData = await fetch(
-    `${BASE_URL}/movie/${movieId}/reviews?api_key=${API_KEY}`
+    `${BASE_URL}movie/${movieId}/reviews?api_key=${API_KEY}`
   );
   const response = await fetchedData.json();
   return response;
@@ -27,7 +27,7 @@ export async function fetchMovieReviewsById(movieId) {
 
 export async function fetchMovieCastById(movieId) {
   const fetchedData = await fetch(
-    `${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`
+    `${BASE_URL}movie/${movieId}/credits?api_key=${API_KEY}`
   );
   const response = await fetchedData.json();
   return response;
@@ -35,7 +35,7 @@ export async function fetchMovieCastById(movieId) {
 
 export async function fetchMovieByQuery(query) {
   const fetchedData = await fetch(
-    `${BASE_URL}/search/movie/?api_key=${API_KEY}&query=${query}`
+    `${BASE_URL}search/movie/?api_key=${API_KEY}&query=${query}`
   );
   const response = await fetchedData.json();
   return response;
