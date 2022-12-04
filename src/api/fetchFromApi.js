@@ -35,7 +35,7 @@ export async function fetchMovieCastById(movieId) {
 
 export async function fetchMovieByQuery(query) {
   const fetchedData = await fetch(
-    `${BASE_URL}search/movie/?api_key=${API_KEY}&query=${query}`
+    `https://api.themoviedb.org/3/search/movie/?api_key=${API_KEY}&query=${query}`
   );
   const response = await fetchedData.json();
   return response;
