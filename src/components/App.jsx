@@ -25,7 +25,7 @@ export const App = () => {
         <Suspense fallback={<Loader />} >
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="movies" element={<MoviesPage />} />
+          <Route path="movies" element={<MoviesPage secure/>} />
           <Route path="movies/:movieId" element={<MoviesDetailsPage />}>
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<Reviews />} />
