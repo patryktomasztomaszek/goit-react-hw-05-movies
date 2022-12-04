@@ -39,7 +39,7 @@ function MoviesPage() {
       <form onSubmit={handleSubmit}>
         <input name="input" />
       </form>
-      {searchResult && <MoviesList moviesData={searchResult} />}
+      {searchResult && <MoviesList secure moviesData={searchResult} />}
     </>
   );
 }
