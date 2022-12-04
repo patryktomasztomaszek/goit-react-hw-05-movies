@@ -4,6 +4,7 @@ import MoviesListItem from 'components/MoviesListItem/MoviesListItem';
 
 function MoviesList({ moviesData }) {
   const movies = moviesData.results;
+  console.log(moviesData);
   return (
     <>
       {movies.length > 0 ? (
