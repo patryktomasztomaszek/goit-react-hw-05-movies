@@ -16,7 +16,7 @@ function MoviesPage() {
       return alert('Type in something!');
     }
     setSerachParams({ query: inputQuery });
-    fetchMovieByQuery(query)
+    fetchMovieByQuery(inputQuery)
       .then(response => {
         setSearchResult(response);
       })
