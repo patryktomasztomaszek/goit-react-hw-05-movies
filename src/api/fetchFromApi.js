@@ -43,7 +43,7 @@ export async function fetchMovieByQuery(query) {
 //   const response = await fetchedData.data
 
   const fetchedData = await fetch(
-    `${BASE_URL}search/movie/?api_key=${API_KEY}&query=${query}`
+    `${BASE_URL}search/movie?api_key=${API_KEY}&query=${query}`
   );
   console.log(fetchedData);
   const response = await fetchedData.json();
