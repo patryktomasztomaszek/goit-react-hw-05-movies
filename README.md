@@ -12,4 +12,4 @@
 
 ## Wersja OnLine pracy domowej 🐈
 
-> [https://patryktomasztomaszek.github.io/goit-react-hw-05-movies/](https://patryktomasztomaszek.github.io/goit-react-hw-05-movies/)
+> [https://ptt-goit-react-hw-05-movies.netlify.app//](https://ptt-goit-react-hw-05-movies.netlify.app/)
