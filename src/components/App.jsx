@@ -1,18 +1,12 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import Loader from './Loader/Loader';
-// import HomePage from '../pages/HomePage';
-// import MoviesPage from '../pages/MoviesPage';
-// import MoviesDetailsPage from '../pages/MovieDetails/Page/MovieDetailsPage';
-// import Reviews from '../pages/Reviews/Reviews';
-// import Cast from '../pages/Cast/Cast';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const MoviesPage = lazy(() => import('../pages/MoviesPage'))
 const MoviesDetailsPage = lazy(() => import('../pages/MovieDetailsPage/MovieDetailsPage'))
 const Reviews = lazy(() => import('../pages/Reviews/Reviews'))
 const Cast = lazy(() => import('../pages/Cast/Cast'))
-// const Loader = lazy(() => {import('./Loader/Loader')})
 
 export const App = () => {
   return (
