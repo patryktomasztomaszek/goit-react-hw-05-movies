@@ -6,7 +6,7 @@ import { Link, Outlet } from 'react-router-dom';
 import styles from './MovieDetails.module.scss'
 
 function MovieDetails({ movieData }) {
-  const { backdrop_path, title, vote_average, overview, genres, links } = movieData;
+  const { backdrop_path, title, vote_average, overview, genres } = movieData;
 
   const genresNames = getGenresNames(genres);
   const imageUrl = getimageUrl(backdrop_path);
