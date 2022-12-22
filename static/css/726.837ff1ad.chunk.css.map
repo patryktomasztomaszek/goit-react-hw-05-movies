@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/726.837ff1ad.chunk.css","mappings":"AAAA,yBACA,aACA,mBAGA,SADA,8BAGA","sources":["components/CastRender/CastRender.module.scss"],"sourcesContent":[".list {\ndisplay: flex;\nflex-flow: row wrap;\n\njustify-content: space-between;\ngap: 20px;\n\nlist-style: none;\n}"],"names":[],"sourceRoot":""}
