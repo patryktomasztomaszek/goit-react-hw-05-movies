@@ -1,0 +1,44 @@
+.movie {
+  width: 100%;
+  padding: 0 20px;
+
+  display: flex;
+  gap: 20px;
+
+  &__left {
+    width: 33.333333%;
+    height: 400px;
+  }
+  &__right {
+    width: 66.66666666%;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__links {
+
+    height: 30px;
+    margin: 20px 0;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+
+    gap: 20px;
+    border: 1px solid #000;
+    border-left: none;
+    border-right: none;
+
+    .links__item {
+      text-decoration: none;
+      font-size: 20px;
+
+      color: #000;
+      font-weight: 500;
+    }
+  }
+
+}

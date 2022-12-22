@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    // padding: 0 20px;
+}
+
+.nav {
+    margin-bottom: 10px;
+    padding: 0 20px;
+    display: flex;
+    border-bottom: 1px solid #000;
+    gap: 10px;
+    &__item {
+        
+        color: green;
+        font-size: 24px;
+        font-weight: 500;
+        text-decoration: none;
+        &:focus {
+            color: lightgreen;
+        }
+    }
+}

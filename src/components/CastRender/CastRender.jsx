@@ -2,13 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { getimageUrl } from 'utils/getImageUrl';
 import notFound from './notFound.png';
+import styles from './CastRender.module.scss'
 
 function CastRender({ castData }) {
   const cast = castData.cast;
+
+  const {list, list__item} = styles;
   return (
     <>
       {cast.length > 0 ? (
-        <ul>
+        <ul className={list}>
           {cast.map(actor => {
             const { id, name, profile_path, character } = actor;
             const imageUrl = profile_path
@@ -16,10 +19,10 @@ function CastRender({ castData }) {
               : notFound;
 
             return (
-              <li key={id}>
+              <li className={list__item} key={id}>
                 <img src={imageUrl} alt={name} />
                 <h3>
-                  {character} ({name})
+                  {character} <br />({name})
                 </h3>
               </li>
             );

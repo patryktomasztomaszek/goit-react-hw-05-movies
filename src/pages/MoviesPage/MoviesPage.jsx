@@ -1,8 +1,9 @@
 import MoviesList from 'components/MoviesList/MoviesList';
 import React from 'react';
 import { useState, useCallback, useEffect } from 'react';
-import { fetchMovieByQuery } from '../api/fetchFromApi';
+import { fetchMovieByQuery } from '../../api/fetchFromApi';
 import { useSearchParams } from 'react-router-dom';
+import styles from './MoviesPage.module.scss'
 
 function MoviesPage() {
   const [searchResult, setSearchResult] = useState(null);
@@ -34,10 +35,12 @@ function MoviesPage() {
     fetchMoviesData();
   }, [fetchMoviesData]);
 
+
+  const {searchbar, searchbar__input} = styles;
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input name="input" />
+      <form className={searchbar} onSubmit={handleSubmit}>
+        <input className={searchbar__input}name="input" />
       </form>
       {searchResult && <MoviesList moviesData={searchResult} />}
     </>

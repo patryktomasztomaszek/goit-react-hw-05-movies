@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MoviesListItem from 'components/MoviesListItem/MoviesListItem';
+import styles from './MoviesList.module.scss'
 
 function MoviesList({ moviesData }) {
   const movies = moviesData.results;
+
+  const {list} = styles;
   return (
     <>
       {movies.length > 0 ? (
-        <ul>
+        <ul className={list}>
           {movies.map(movie => (
             <MoviesListItem key={movie.id} movieData={movie} />
           ))}
